@@ -8,24 +8,15 @@ import Vue.VuePensee;
 public class App {
 
 	public static void main(String[] parametres) {
-
-		VuePensee.launch(VuePensee.class, parametres);
-		
 		
 		//Journal.activer();
-		Journal.activerNiveau(0);
-		
-		PenseeDAO penseeDAO = new PenseeDAO();
-		List<Pensee> listePensees = penseeDAO.listerPensees();
-		
-		for(Iterator<Pensee> visiteur = listePensees.iterator(); visiteur.hasNext(); )
-		{
-			Pensee pensee = visiteur.next();		
-			Journal.ecrire(5, pensee.getMessage() + "(" + pensee.getAuteur() + ")");
-		}
+				Journal.activerNiveau(0);
+				
 
-		Pensee pensee = new Pensee("Rossetti","Ce qui est plus triste qu une oeuvre inachevee, c est une oeuvre jamais commencee.");
-		penseeDAO.ajouterPensee(pensee);
+		VuePensee.launch(VuePensee.class, parametres);
+
+		//Pensee pensee = new Pensee("Rossetti","Ce qui est plus triste qu une oeuvre inachevee, c est une oeuvre jamais commencee.");
+		//penseeDAO.ajouterPensee(pensee);
 
 	}
 	
