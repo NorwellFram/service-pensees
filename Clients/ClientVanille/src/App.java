@@ -11,6 +11,7 @@ public class App {
 
 		VuePensee.launch(VuePensee.class, parametres);
 		
+		
 		//Journal.activer();
 		Journal.activerNiveau(0);
 		
