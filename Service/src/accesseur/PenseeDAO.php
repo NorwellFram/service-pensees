@@ -1,5 +1,6 @@
 <?php
 	include_once "basededonnees.php";
+
 	class PenseeDAO
 	{
 		function listerPensees()
@@ -10,7 +11,6 @@
 			$requeteListerPensees->execute();
 			return $requeteListerPensees->fetchAll(PDO::FETCH_OBJ);
 		}
-		
 		function ajouterPensee($pensee)
 		{
 			echo "ajouterPensee()";

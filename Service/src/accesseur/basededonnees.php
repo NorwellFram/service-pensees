@@ -1,10 +1,14 @@
 <?php 
-
 	$base = "inspiration";
 	$hote = "localhost";
 	$usager = "root";
-	$motdepasse = "testtest";
+	$motdepasse = "eloilou99";
 	$dsn = "mysql:dbname=".$base.";host=" . $hote;
-	$basededonnees = new PDO($dsn, $usager, $motdepasse);
-
+	//echo $dsn;
+	$basededonnees;
+	try{
+		$basededonnees = new PDO($dsn, $usager, $motdepasse);
+	}catch(PDOExeption $e){
+		echo "Erreur" .$e->getMessage();
+	}
 ?>
