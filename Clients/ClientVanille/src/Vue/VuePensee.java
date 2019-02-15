@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class VuePensee extends Application {
 	public VuePensee()
 	{
-		System.out.println("new VueInspiration()");
+		System.out.println("new VuePensée()");
 		VuePensee.instance = this;	
 	}
 	protected static VuePensee instance = null;
@@ -26,16 +26,22 @@ public class VuePensee extends Application {
 		stade.show();
 	}	
 	
-	public void ecrireUnMessage(String message)
+	public void ecrireUnePensee(String message)
 	{
-		TextField champsMessage = (TextField) scene.lookup("#champsMessage");
+		TextField champsMessage = (TextField) scene.lookup("#penseeMsg");
 		champsMessage.setText(message);		
 	}
 	
-	public void ecrireUnMotDePasse(String motDePasse)
+	public void ecrireUnAuteur(String auteur)
 	{
-		PasswordField champsMotdepasse = (PasswordField) scene.lookup("#champsMotdepasse");
-		champsMotdepasse.setText(motDePasse);		
+		TextField champsMessage = (TextField) scene.lookup("#auteurMsg");
+		champsMessage.setText(auteur);		
+	}
+	
+	public void ecrireUneDate(String date)
+	{
+		TextField champsMessage = (TextField) scene.lookup("#dateMsg");
+		champsMessage.setText(date);		
 	}
 	
 }

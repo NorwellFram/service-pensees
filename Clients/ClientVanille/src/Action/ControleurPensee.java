@@ -26,11 +26,12 @@ public class ControleurPensee {
 	
 	@FXML protected void enregistrer(ActionEvent evenement) {
     	
-    	System.out.println("enregistrer( )");
+    	System.out.println("suivant( )");
     	
     	// Singleton obligatoire car le framework de JavaFX cache l'instance
-    	VuePensee.getInstance().ecrireUnMotDePasse("coucou");
-    	VuePensee.getInstance().ecrireUnMessage("allo");
+    	VuePensee.getInstance().ecrireUnePensee("pensee");
+    	VuePensee.getInstance().ecrireUnAuteur("auteur");
+    	VuePensee.getInstance().ecrireUneDate("date");
     }
 	
 }
