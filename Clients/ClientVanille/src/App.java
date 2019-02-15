@@ -3,11 +3,14 @@ import java.util.List;
 import accesseur.PenseeDAO;
 import modele.Pensee;
 import outils.Journal;
+import Vue.VuePensee;
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] parametres) {
 
+		VuePensee.launch(VuePensee.class, parametres);
+		
 		//Journal.activer();
 		Journal.activerNiveau(0);
 		
