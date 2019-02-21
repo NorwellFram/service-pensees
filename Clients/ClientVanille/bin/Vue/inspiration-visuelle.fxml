@@ -2,41 +2,22 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
-<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Action.ControleurPensee">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="728.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="action.ControleurInspirationVisuelle">
   <children>
-    <Button layoutX="17.0" layoutY="359.0" mnemonicParsing="false" onAction="#enregistrer" prefWidth="396.0" text="Pensée suivante" />
-      <TitledPane animated="false" layoutX="77.0" layoutY="14.0" prefHeight="215.0" prefWidth="288.0" text="Pensée">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="286.0">
-               <children>
-                  <TextField id="penseeMsg" layoutY="1.0" prefHeight="189.0" prefWidth="288.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="77.0" layoutY="229.0" prefHeight="64.0" prefWidth="288.0" text="Auteur">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <TextField id="auteurMsg" layoutX="1.0" layoutY="2.0" prefHeight="34.0" prefWidth="288.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="77.0" layoutY="293.0" prefHeight="56.0" prefWidth="288.0" text="Date">
-        <content>
-          <AnchorPane  minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <TextField id="dateMsg" layoutX="-1.0" layoutY="-3.0" prefHeight="32.0" prefWidth="288.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </TitledPane>
+    <BorderPane layoutX="164.0" layoutY="39.0" prefHeight="500.0" prefWidth="364.0">
+      <bottom>
+        <Button mnemonicParsing="false" onAction="#trouverInspiration" prefWidth="364.0" text="Trouver une inspiration" />
+      </bottom>
+      <center>
+        <TextArea id="listePensees" prefHeight="400.0" prefWidth="200.0" style=" -fx-border-color: brown ;  &#10; -fx-border-width: 2px ;  &#10;-fx-control-inner-background: orange;" wrapText="true" />
+      </center>
+      <top>
+        <TextArea prefHeight="67.0" prefWidth="364.0" style="-fx-font-size: 40pt;&#10;-fx-font-weight:bold;&#10;-fx-text-fill:brown;" text="Pensée du jour" wrapText="true" />
+      </top>
+    </BorderPane>
   </children>
 </AnchorPane>
